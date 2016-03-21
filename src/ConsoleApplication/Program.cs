@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Linq;
 
 namespace ConsoleApplication
 {
@@ -6,6 +8,9 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
+            if (args.LastOrDefault() == "debug")
+                Debugger.Launch();
+
             Console.WriteLine("Hello, you passed in the following arguments:");
 
             foreach (var arg in args)
